@@ -1,0 +1,24 @@
+{
+	"name": "durable-object-starter",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types",
+		"generate-types": "npm run cf-typegen && ts-node --project src/scripts/tsconfig.json src/scripts/generate-types.ts"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250428.0",
+		"typescript": "^5.5.2",
+		"wrangler": "^3.114.0"
+	},
+	"dependencies": {
+		"@outerbase/browsable-durable-object": "^0.1.1",
+		"@outerbase/starbasedb": "^0.1.4",
+		"@types/node": "^22.15.3",
+		"agents": "^0.0.37",
+		"ts-node": "^10.9.2"
+	}
+}
